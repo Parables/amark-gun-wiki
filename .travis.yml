@@ -1,15 +1,15 @@
 script:
-- |
-  git config user.name "<USER_NAME>"
-  git config user.email "<EMAIL>"
-  git remote remove origin
-  git remote add origin https://$GITHUB_API_KEY@github.com/Parables/amark-gun-wiki.git > /dev/null 2>&1
-  git remote add upstream https://$GITHUB_API_KEY@github.com/amark/gun.wiki.git > /dev/null 2>&1
-  git fetch origin
-  git fetch upstream
-  git merge upstream/master --no-edit
-  git push origin HEAD:master > /dev/null 2>&1
-  git push upstream HEAD:master > /dev/null 2>&1
+  - |
+    git config user.name "Parables"
+    git config user.email "<EMAIL>"
+    git remote remove origin
+    git remote add origin https://$GITHUB_API_KEY@github.com/Parables/amark-gun-wiki.git > /dev/null 2>&1
+    git remote add upstream https://$GITHUB_API_KEY@github.com/amark/gun.wiki.git > /dev/null 2>&1
+    git fetch origin
+    git fetch upstream
+    git merge upstream/master --no-edit
+    git push origin HEAD:master > /dev/null 2>&1
+    git push upstream HEAD:master > /dev/null 2>&1
 env:
   matrix:
     secure: v22Z0NC0iWxW1DoolsMwO0znNgOL1qt73NPuHMKaTA4eOHRIhZXza8tWT0S7c6xN7NStE9cC6Nf4887BvRr75MMcP647hGdwdMKuicegbLhSydICu2/8/4aTXpCB3ssYcbdFr6c532lbpBRA4+/HDW2353wWeyKtbVAukbMKaFkvFsYmaOHVu5eQWVm61YzgXC1fDMHm53KM90NpjAgfpZyTf0Xp8qK0GVCg8ahxK/ipQI6hRWz2j1ZynN6O7FxXK5gvuinDs41E/nd2xVLYVC+xALPJXbLAgynW+kT44xeECG7bTYzG5uojQG0pd+lQ6LxbBdzUtIp37Uoh+y+DY33JpfPrcMAyVUnz8BnDtCDmOMRIB4y1G7SdAndmw3PEabPVFMURebxc5BffMKp2l5/qitvm5AY5z4+cx8cc2kTpgWFq+jp4EBaTHKb8cT7zjrfqAZoTPTHyls+JuV6fgMT7ealTKtxiCvXnCkmJY622Yc4ChMG1VLFy6s860wJ4wZvZapxOZwZ4fcMAr43+ZiEC24lVNgRYVALtcdlgqGlnifNyTH5SCaWtuWi00dYi+7sexcUzWl3HSFko4a5V6/iofwZKvNcUbaPG/v7LyiSbI4kqUtIP2yK/b6KVPkMtfW1EqlnmnP9tnhyiLpzXOPCz0lO9vz216pTegzfp6/Q=

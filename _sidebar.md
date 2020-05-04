@@ -8,79 +8,68 @@
   - Tutorials
     - [Todo Dapp](Todo-Dapp.md "Todo Dapp - GUN documentation")
     - [Learn to Code](Learn-Code.md "Learn Code - GUN documentation")
-    - Basic Todo List
+    - [Basic Todo List](Basic-Todo-App-Tutorial.md "Basic Todo App Tutorial")
   - Guides
-    - Intro to Graphs
-    - Basic Todo List
-    - React Native
-    - AWS S3
-    - Blog Example
-    - React
-    - dWeb: The Decentralized Web
-    - Privacy: What You Need To Know
-- FAQ
+    - [Intro to Graphs](Graph-Guide.md "Graph Guide")
+    - [Basic Todo List](Basic-Todo-App-Guide.md)
+    - [React Native](React-Native.md)
+    - [AWS S3](Using-Amazon-S3-for-Storage.md)
+    - [Blog Example](Design-Examples.md)
+    - [React](React-Tutorial.md)
+    - [dWeb: The Decentralized Web](dWeb-The-Decentralized-Web.md)
+    - [Privacy: What You Need To Know](Privacy-What-You-Need-To-Know.md)
+- [FAQ](FAQ.md)
 - How
-  - How to Run A GUN Server
-  - How to Port GUN
-  - How Writes Work
-  - How to Create Users
-  - How to Add Security
-  - How to Extend GUN
-  - How to Delete Data
-  - How Reactive Programming Works
-  - How Chaining Works
-  - How to Store Time Based Data
-  - How to Sync Time
-  - How to do Transactions
-  - How to Implement other CRDTs
-  - How to use S3 for Storage
-  - How to Help
-  - How to Contribute
+  - [How to Run A GUN Server](How-to-Run-A-GUN-Server.md)
+  - [How to Port GUN](Porting-GUN.md)
+  - [How Writes Work](Partials-and-Circular-References.md)
+  - [How to Create Users](User.md)
+  - [How to Add Security](Auth.md)
+  - [How to Extend GUN](Adding-Methods-to-the-Gun-Chain.md)
+  - [How to Delete Data](Delete.md)
+  - [How Reactive Programming Works](FRP.md)
+  - [How Chaining Works](Chain.md)
+  - [How to Store Time Based Data](Timegraph.md)
+  - [How to Sync Time](How-to-Sync-Time.md)
+  - [How to do Transactions](Transactions.md)
+  - [How to Implement other CRDTs](Counter.md)
+  - [How to use S3 for Storage](Using-Amazon-S3-for-Storage.md)
+  - [How to Help](Help.md)
+  - [How to Contribute](Contributing.md)
 - Why
-  - Why Performance Matters
-  - Why GUN Won't Shut Down
+  - [Why Performance Matters](Performance.md)
+  - [Why GUN Won't Shut Down](Why-GUN-Won't-Shut-Down.md)
 - Who
-  - Awesome List
+  - [Awesome List](Awesome-GUN.md)
 - What
-  - Roadmap
+  - [Roadmap](Roadmap.md)
 - Architecture
-  - CAP
-  - DAM
-  - CRDT
-  - PTSD
-  - PANIC
-  - PARTY
-  - Iris
-  - Cartoon
-  - Cryptography
-  - Graph Data Structure
-  - Graph Data Structure 2
-  - Hypothetical
-  - Amnesia Machine
-  - Authentication
-  - Adapter Performance
-  - Service Discovery
-  - Terminology
-  - Sharding
-  - JavaScript
-  - Shim
-  - Null
-- AXE
-  - Advanced eXchange
-  - Equation
-  - Cartoon Whitepaper
-  - Lightning Talk
-  - Whitepaper
-  - Contributing
-  - Roadmap
-  - Code
-  - FAQ
+  - [CAP](CAP-Theorem.md)
+  - [DAM](DAM.md)
+  - [CRDT](Conflict-Resolution-with-Guns.md)
+  - [PTSD](PTSD.md)
+  - [PANIC](Panic.md)
+  - [PARTY](Party.md)
+  - [Iris](Iris.md)
+  - [Cartoon Cryptography](Cartoon-Cryptography.md)
+  - [Graph Data Structure](Simple-introduction-to-graph-data-structures.md)
+  - [Graph Data Structure 2](GUN’s-Data-Format-(JSON).md)
+  - [Hypothetical Amnesia Machine](Hypothetical-Amnesia-Machine.md)
+  - [Authentication](Security,-Authentication,-Authorization.md)
+  - [Adapter Performance](Adapter-Performance.md)
+  - [Service Discovery](Service-Discovery.md)
+  - [Terminology](Glossary.md)
+  - [Sharding](Sharding.md)
+  - [JavaScript](javascript.md)
+  - [Shim](shim.js.md)
+  - [Null](Null.md)
+- [AXE](AXE.md)
 - API
-  - GUN API
-  - SEA API
-  - RAD API
-  - JOY API
+  - [GUN API](API.md)
+  - [SEA API](SEA.md)
+  - [RAD API](RAD.md)
+  - [JOY API](JOY.md)
 - Adapters
-  - Storage
-  - Radisk
-  - Building Storage Adapters
+  - [Storage](Storage.md)
+  - [Radisk](Radisk.md)
+  - [Building Storage Adapters](Building-Storage-Adapters.md)
