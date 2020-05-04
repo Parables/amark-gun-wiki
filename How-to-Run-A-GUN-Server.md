@@ -1,0 +1,1 @@
+> These docs are out of date! Please check https://gun.eco/docs/Installation#server instead.

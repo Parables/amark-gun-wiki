@@ -1,0 +1,19 @@
+Let us be frank here, the shut down of incredible companies like RethinkDB have really shaken developer trust in Open Source. Let alone the shut down of companies like Parse and others. Why won't GUN fall prey to this same problem?
+
+I explore more of my thoughts on Open Source licenses and the post-mortem of RethinkDB on this The Changelog podcast episode - https://changelog.com/podcast/236.
+
+One of the things that we are doing is making sure to always license our code as MIT or ZLIB or Apache 2. This is a promise (and a legal one too) to developers that the ideals and values of Open Source will always be there, first and foremost. In fact, the license was determined by you, a community vote, see here - https://github.com/amark/gun/issues/17 .
+
+Now, what about the macro-economics that are at play?
+
+5 billion new people are coming online by 2020, that means any scaling problem you have now just more than doubled in complexity. This opportunity is enormous and proportional to how scalable your system can be - which means decentralized tools will win out over time compared to their centralized alternatives. So the second most important thing (after our promise to license Openly) is to be in a market experiencing a rich explosion of opportunity - don't build tools for dying ways.
+
+Third, unlike attempts to sell support licenses or DBaaS or "open core" crippleware, we're taking the approach of partnering with developers/companies that build industry transformational product and solutions for governments and enterprises. We believe that if we can enable others to be able to create answers for the needs of large organizations, then we both can mutually benefit by creating revenue shared partnerships and branding. This is already happening with several companies, and we're rolling out to a government (but I can't disclose who/what/how yet, but hopefully in the next half year).
+
+We're confident this will work, and it will pave the pathway for other Open Source vendors to adopt a real business model that can work, without any of the unfortunate alternatives strategies many have taken (open core crippleware, unlikely support licenses, struggling DBaaS, etc.). This creates the best "win-win-win" environment, where startups get to piggy back for free while governments and enterprises pay for the much needed technology solutions to handle the coming transformation, while simultaneously growing our partner's pockets and our trusted brand.
+
+What transformation am I talking about? Again, the 5B new people, the advent of IoT and every autonomous car or burrito delivery drone, and the demand for doing machine learning on the whole system at a global scale. For more information on things like this, check out this [article distributed machine learning with gun](http://myrighttocode.org/blog/artificial%20intelligence/particle%20swarm/genetic%20algorithm/collective%20knowledge/machine%20learning/gun-db-artificial-knowledge-sharing).
+
+This transformation won't succeed unless it can be built on top of truly Open technology, and that is why license is important. The openness of the internet is evidence of this, the Tech Industry grew and incredible rates while the whole rest of the world economy collapsed around the housing crisis back in the 2010s. Why did Tech succeed where everything else couldn't? The answer is quite simple: In the power of open ideas, and decentralized architecture - the world wide web, a beautiful free collaboration across countless companies abiding by open standards. The future is bright, and we're here to build it with you, for the long game.
+
+And tip: For developers wanting to start their own Open Source project, there is always the Patreon route - VueJS is doing $9K+ a month and [our campaign](https://www.patreon.com/gunDB) is doing pretty well as well. No harm in trying, but just get out there, work hard, solve interesting problems, and leverage opportunities across networks.
