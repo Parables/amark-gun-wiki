@@ -11,9 +11,9 @@
     - [Basic Todo List](Basic-Todo-App-Tutorial.md "Basic Todo App Tutorial")
   - Guides
     - [Intro to Graphs](Graph-Guide.md "Graph Guide")
-    - [Basic Todo List](Basic-Todo-App-Guide.md)
-    - [React Native](React-Native.md)
-    - [AWS S3](Using-Amazon-S3-for-Storage.md)
+    - [Basic Todo List](Basic-Todo-App-Guide.md "Basic Todo App Guide")
+    - [React Native](React-Native.md "React Native")
+    - [AWS S3](Using-Amazon-S3-for-Storage.md "Using Amazon S3 for Storage")
     - [Blog Example](Design-Examples.md)
     - [React](React-Tutorial.md)
     - [dWeb: The Decentralized Web](dWeb-The-Decentralized-Web.md)

@@ -16,4 +16,4 @@
 [Docs](Introduction.md)
 [Get Started](Todo-Dapp.md)
 
-![color](#c8c8c8)
+![color](transparent)
