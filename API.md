@@ -10,20 +10,20 @@ Think these docs could be improved? Contribute to the wiki! Or [comment](https:/
 
 **Main API**
  - [gun.on](#on)
- - [gun.once](#once) ([gun.val](#val))
+ - [gun.once](#once) ([gun.val](#val))  
  - [gun.set](#set)
  - [gun.map](#map)
 
 **User API (authenticated)**
- - [gun.user.create](https://gun.eco/docs/User#create)
- - [gun.user.auth](https://gun.eco/docs/User#auth) TBD
- - [gun.user.leave](https://gun.eco/docs/User#leave) TBD
- - [gun.user.delete](https://gun.eco/docs/User#delete) TBD
- - [gun.user.recall](https://gun.eco/docs/User#recall) TBD
- - [gun.user.alive](https://gun.eco/docs/User#alive) TBD
- - [gun.user.trust](https://gun.eco/docs/User#trust) TBD
- - [gun.user.grant](https://gun.eco/docs/User#grant) TBD
- - [gun.user.secret](https://gun.eco/docs/User#secret) TBD
+ - [gun.user.create](/User#create)
+ - [gun.user.auth](/User#auth) TBD
+ - [gun.user.leave](/User#leave) TBD
+ - [gun.user.delete](/User#delete) TBD
+ - [gun.user.recall](/User#recall) TBD
+ - [gun.user.alive](/User#alive) TBD
+ - [gun.user.trust](/User#trust) TBD
+ - [gun.user.grant](/User#grant) TBD
+ - [gun.user.secret](/User#secret) TBD
 
 **Extended API**
  - [gun.path](#path)
@@ -57,7 +57,7 @@ var gun = Gun(options)
 
 ### Options
 
- - no parameters `undefined` creates a local datastore using the default persistence layer, either localStorage or [Radisk](https://gun.eco/docs/Storage#radix).
+ - no parameters `undefined` creates a local datastore using the default persistence layer, either localStorage or [Radisk](/Storage#radix).
 
  - passing a URL `string` creates the above local datastore that also tries to sync with the URL.
 
@@ -67,7 +67,7 @@ var gun = Gun(options)
 
    - `options.peers` is an object, where the URLs are properties, and the value is an empty object.
 
-   - `options.radisk` (boolean, default: `true`) creates and persists local (nodejs) data using [Radisk](https://gun.eco/docs/Storage#radix).
+   - `options.radisk` (boolean, default: `true`) creates and persists local (nodejs) data using [Radisk](/Storage#radix).
 
    - `options.localStorage` (boolean, default: `true`) persists local (browser) data to localStorage.
 
@@ -405,7 +405,7 @@ Since gun streams data, the callback will probably be called multiple times as n
 
 To remove a listener call .off() on the same property or node.
 
- > Note: If data is a node (object), it may have `_` meta property on it. If you [delete](https://gun.eco/docs/Delete) an item, you might get a `null` tombstone.
+ > Note: If data is a node (object), it may have `_` meta property on it. If you [delete](/Delete) an item, you might get a `null` tombstone.
 
 ### Option
 Currently, the only option is to filter out old data, and just be given the changes. If you're listening to a node with 100 fields, and just one changes, you'll instead be passed a node with a single property representing that change rather than the full node every time.
@@ -484,7 +484,7 @@ Get the current data without subscribing to updates. Or `undefined` if it cannot
 ### Callback(data, key)
 The data is the value for that chain at that given point in time. And the key is the last property name or ID of the node.
 
- > Note: If data is a node (object), it may have `_` meta property on it. If you [delete](https://gun.eco/docs/Delete) an item, you might get a `null` tombstone. If the data cannot be found, `undefined` may be called back.
+ > Note: If data is a node (object), it may have `_` meta property on it. If you [delete](/Delete) an item, you might get a `null` tombstone. If the data cannot be found, `undefined` may be called back.
 
 ### Examples
 ```javascript
