@@ -35,4 +35,4 @@ In the above chat example, let's say Alice and Bob were in different parts of th
 The other issue availability aims to solve is if a server is interrupted due to technical or environmental issues. If the database that serves those users goes down, they need their data to be backed up somewhere in the event of catastrophic data loss. Companies will replicate that data across many servers for issues such as these. They end up with higher maintenance and infrastructure costs due to the waste generated. 
 
 Gun solves this issue by replicating your data across many other users (called peers). This reduces the requirement of having servers, infrastructure, maintenance, and specialized employees in the operational fields. The last, being an extreme expense simply due to the nature of being highly specialized in running constantly changing specific commands, investigating issues, and analyzing network and file data.
-</details>
+</details>  

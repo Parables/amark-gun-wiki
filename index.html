@@ -16,6 +16,7 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
+      search: 'auto'
       name: 'GUN Documentation',
       repo: 'https://github.com/Parables/amark-gun-wiki.git',
       homepage: 'Introduction.md',
@@ -27,9 +28,19 @@
       nameLink: {
         '/': '/',
       },
+          // complete configuration parameters
+    search: {
+      maxAge: 86400000, // Expiration time, the default one day
+      paths: [], // or 'auto'
+      placeholder: 'Type to search',
+
+
+      noData: 'No Results!',
+
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="https://unpkg.com/docsify-copy-code@2"></script>
 </body>
 
