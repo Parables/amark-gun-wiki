@@ -22,65 +22,22 @@
   <script>
     window.$docsify = {
       search: 'auto',
-      search : [
-      '/',            // => /README.md
-      '/Installation',      // => /Installation.md
-      '/Hello-World', // => /Hello-World.md
-      '/Next-Steps',
-      '/Crash-Course',
-      '/Todo-Dapp',
-      '/Learn-Code',
-      '/Basic-Todo-App-Tutorial',
-      '/Graph-Guide',
-      '/Basic-Todo-App-Guide',
-      '/React-Native',
-      '/Using-Amazon-S3-for-Storage',
-      '/Design-Examples',
-      '/React-Tutorial',
-      '/dWeb-The-Decentralized-Web',
-      '/FAQ',
-      '/How-to-Run-A-GUN-Server',
-      '/Porting-GUN',
-      '/Partials-and-Circular-References',
-      '/User',
-      '/Auth',
-      '/Adding-Methods-to-the-Gun-Chain',
-      '/Delete',
-      '/FRP',
-      '/Chain',
-      '/Timegraph',
-      '/How-to-Sync-Time',
-      '/Transactions',
-      '/Counter',
-      '/Using-Amazon-S3-for-Storage',
-      '/Help',
-      '/Contributing',
-      '/Performance',
-      "/Why-GUN-Won't-Shut-Down",
-      '/Awesome-GUN',
-      '/Roadmap',
-      '/CAP-Theorem',
-      '/DAM',
-      '/Conflict-Resolution-with-Guns',
-      '/PTSD',
-      '/Panic',
-      '/Party',
-      '/Iris',
-      '/AXE',
-      '/API',
-      '/SEA',
-      '/RAD',
-      '/JOY',
-      '/Storage',
-      '/Radisk',
-      '/Building-Storage-Adapters'
-    ],
+      search: {
+        noData: {
+          '/': 'No results!'
+        },
+        paths: 'auto',
+        placeholder: {
+          '/': 'Search'
+        }
+      },
       name: 'GUN Documentation',
       repo: 'https://github.com/Parables/amark-gun-wiki.git',
       homepage: 'Introduction.md',
       coverpage: true,
       // logo: './media/gun.svg',
       loadSidebar: true,
+      loadNavbar: true,
       autoHeader: true,
       subMaxLevel: 20,
       nameLink: {
