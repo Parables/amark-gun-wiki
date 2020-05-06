@@ -10,8 +10,6 @@
     font-size: 150%">protecting <span id="many"></span> people's privacy <span></span></p>
 			<p style="color: white; font-family: Raleway;   font-size: 150%">the decentralized database for developers.</p>
 </div>
-	
-
 
 [Docs](Introduction.md)
 [Get Started](Todo-Dapp.md)
