@@ -1,12 +1,39 @@
 # Want to use GUN with Svelte?
 
- > Check out [Svelte GUN chat](https://github.com/vnglst/svelte-gundb-chat) for a good starting example!
+Here is a quick example of how gorgeous a GUN + Svelte integration can be:
+
+```html
+<script>
+// ./src/App.svelte
+import { gun } from "./svelte-gun.js"
+const cats = gun.get("pets").get("cats").map()
+
+let catName = ""
+</script>
+
+{#each $cats as [key, cat]}
+    <div key={key} id={key}>{cat.name}</div>
+{/each}
+
+<input bind:value={catName} on:submit={() => cats.set({ name: catName })} />
+```
+
+ > To see this approach in action, check the [Svelte REPL](https://svelte.dev/repl/3c87b6cae4da4382b02d85c961490719?version=3.22.3).
+
+Before we show you the [magic](#magic), let's go over a more verbose integration & a [tutorial](#tutorial) so you can understand what is happening.
+
+ > Or if you want to start with an [example chat app](https://github.com/vnglst/svelte-gundb-chat), check out this repo!
+
+## Guide
 
 Svelte has an [approach to reactivity](https://svelte.dev/blog/svelte-3-rethinking-reactivity) that couples very well with GUN, since you are able to use gun directly as a store within Svelte components. As a result, you can easily bind GUN data to Svelte in a way that feels like vanilla JavaScript, and is similar to the vanilla examples used in most of GUNs documentation.
 
-Check out the examples below or try your hand in at a simple [Todos example with the Svelte REPL](https://svelte.dev/repl/634ff063c3424bb9a203bd38cbaa2d73?version=3.16.4)
+Check out the examples below or try your hand in at a simple [todos example with the Svelte REPL](https://svelte.dev/repl/634ff063c3424bb9a203bd38cbaa2d73?version=3.16.4):
 
-We have two recommended approaches to bind data to GUN. One for use directly in Svelte components and one for writing stores that can be reused across components.
+## Create your own GUN bindings
+Sometimes you would rather use a store to do additional processing of Gun data, for example to render a date with a specific format.
+
+We have two recommended approaches to bind data to GUN with custom stores. One for use directly in Svelte components and one for writing stores that can be reused across components.
 
 #### Using GUN in a single component
 The recommended approach to bind GUN data directly to a Svelte component is this:
@@ -52,7 +79,7 @@ The store below is a simplified version of the official Svelte `writable` store.
 import Gun from "gun/gun"
 const gun = Gun()
 
-function gunStore(ref, methods = {}) {
+function customStore(ref, methods = {}) {
   const store = {}
   const subscribers = []
 
@@ -261,6 +288,43 @@ function createMapStore(ref) {
 const todosRef = gun.get("todos").map()
 export const todos = createMapStore(todosRef, {})
 ```
+
+ ## Magic
+
+Curious how the gorgeous quick start example worked? Well, it turns out Svelte looks for a `.subscribe` attribute, so we can trick Svelte into pulling straight from GUN by adding this special extension:
+
+```javascript
+// ./src/svelte-gun.js
+import Gun from "gun/gun"
+
+Gun.chain.subscribe = function(publish) {
+  var gun = this
+  var at = gun._
+  var isMap = !!at && !!at.back && !!at.back.each
+
+  if (isMap) {
+    var store = new Map()
+    publish(Array.from(store))
+    gun = gun.on((data, _key, as) => {
+      var key = _key || ((data||{})._||{})['#'] || as.via.soul
+      if (data === null) {
+        store.delete(key)
+      } else {
+        store.set(key, data)
+      }
+      publish(Array.from(store))
+    })
+  } else {
+    gun = gun.on(data => publish(data))
+  }
+
+  return gun.off()
+}
+export const gun = Gun()
+export default Gun
+```
+
+Now Svelte will automatically pull from it. Certainly makes writing GUN powered Svelte apps easy! But we hope you enjoyed both the verbose integration and the magical ones.
 
 ---
 Anything to add? [Add more to this article](https://github.com/amark/gun/wiki/Svelte/_edit)! 
